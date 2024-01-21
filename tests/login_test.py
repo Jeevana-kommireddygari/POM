@@ -3,7 +3,8 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-from POM.tests.pages.login_page import LoginPage
+from .pages.login_page import LoginPage
+
 
 @pytest.fixture()
 def driver():
@@ -24,3 +25,4 @@ def test_login(driver):
     time.sleep(1)
     login_page.click_login()
     time.sleep(1)
+
